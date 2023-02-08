@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
+    <link rel="stylesheet" href="/static/css/style_for_admin.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <span class="logo_name">{{ session['user']['name'] }}</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="/dashboard/">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="/templates/capture/" class="active">
+            <i class='bx bxs-face' ></i>
+            <span class="links_name">Face Capture</span>
+          </a>
+        </li>
+        <li>
+          <a href="/templates/checkin/">
+            <i class='bx bx-check-square'></i>
+            <span class="links_name">Check-in</span>
+          </a>
+        </li>
+        <li>
+          <a href="/templates/checkout/">
+            <i class='bx bxs-check-square' ></i>
+            <span class="links_name">Check-Out</span>
+          </a>
+        </li>
+        <li>
+          <a href="/templates/to-do/">
+            <i class="bx bx-book-alt"></i>
+            <span class="links_name">To Do</span>
+          </a>
+        </li>
+        <li>
+          <a href="/templates/my-profile/">
+            <i class="bx bx-user"></i>
+            <span class="links_name">My Profile</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="/user/signout">
+            <i class="bx bx-log-out"></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <section class="main capture-face">
+        <h2 class="heading" id="capture-heading">Capture Your Face</h2>
+        <h3 class="note">Note: Your face should clearly visible and only your face should be there in the frame</h3>
+        <div class="camera-wrapper">
+          <div id="camera-capture">
+            <img src="{{ url_for('video_feed') }}" />
+          </div>
+
+          <form method="post" action="{{ url_for('tasks') }}">
+            <input
+              class="button capture-btn"
+              type="submit"
+              value="Capture"
+              name="click"
+            />
+            <input
+              class="button stop-btn"
+              type="submit"
+              value="Stop"
+              name="stop"
+            />
+          </form>
+        </div>
+      </section>
+    </section>
+
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+      };
+    </script>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/scripts.js"></script>
+  </body>
+</html>

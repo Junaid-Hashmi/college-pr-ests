@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #0A2558;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0A2558;
+}
+
+.card {
+  background: #fff;
+  max-width: 430px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 20px;
+  padding: 30px;
+}
+
+.card .form-title {
+  position: relative;
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.card .form-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background-color: var(--primary-color);
+  border-radius: 25px;
+}
+
+.form .input-field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.input-field input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.input-field select {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+
+.input-field input:is(:focus, :valid) {
+  border-bottom-color: var(--primary-color);
+}
+
+.input-field i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 23px;
+  transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i {
+  color: var(--primary-color);
+}
+
+.input-field i.icon {
+  left: 0;
+}
+.input-field i.showHidePw {
+  right: 0;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.form .text {
+  color: #333;
+  font-size: 14px;
+}
+.form a.text {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.form a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+}
+
+/* BUTTON */
+
+.form .button {
+  margin: 35px 0;
+}
+
+.form .button input {
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button input:hover {
+  background-color: #0A2558;
+}
+
+/* ----------------DASHBOARD----------------- */
+.dashboard {
+  /* height: 100vh; */
+  display: flex;
+  text-transform: uppercase;
+}
+
+.sidebar {
+  color: #0A2558;
+  background-color: #fff;
+  width: 25vw;
+  text-align: center;
+}
+
+/* profile */
+#photo {
+  width: 175px;
+  margin: 30px 30px 10px;
+  border-radius: 50%;
+  background-color: #cbd5e1;
+}
+.name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+/* nav ul li {
+  width: 100%;
+} */
+.nav-links {
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: block;
+  width: 80%;
+  margin: auto;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+.nav-links:hover {
+  background-color: #0A2558;
+}
+
+/* main */
+.main {
+  background-color: #0A2558;
+  flex-grow: 1;
+  text-align: center;
+  color: #fff;
+  height: 120vh;
+}
+.main .heading {
+  margin: 50px 0 40px;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+.date-display {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-left: 60px;
+}
+/* Timeclock box */
+.timeclock {
+  display: flex;
+  width: 60%;
+  margin: 20px auto;
+  gap: 20px;
+  background-color: #cbd5e1;
+  padding: 20px 30px;
+  border-radius: 6px;
+}
+.timing-box {
+  width: 50%;
+}
+.timing-box--heading {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.time {
+  color: var(--primary-color);
+  background-color: #fff;
+  padding: 60px 0;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 4rem;
+}
+.am-pm {
+  font-size: 1.6rem;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/*-----------------Camera Capture Page -----------*/
+/* .camera-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 80%;
+  margin: auto;
+  height: 65vh;
+} */
+
+/* #capture-heading {
+  margin: 20px 0;
+} */
+#camera-capture {
+  margin: 0 auto 30px;
+  height: 75vh;
+  width: 80%;
+}
+.main .button {
+  border: none;
+  padding: 10px 20px;
+  color: var(--primary-color);
+  background-color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* -----------------TASK MANAGER-------------------- */
+
+#new-task-form {
+  display: flex;
+  justify-content: center;
+}
+.todo-section input,
+.todo-section button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new-task-input {
+  flex: 1 1 0%;
+  background-color: #fff;
+  padding: 8px 16px;
+  margin: 0 50px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+#new-task-submit {
+  margin-right: 50px;
+  font-weight: 600;
+  color: #0A2558;
+  background-color: #fff;
+  font-size: 15px;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+#new-task-submit:hover {
+  cursor: pointer;
+}
+
+.add-task-wrapper {
+  margin-bottom: 50px;
+}
+
+.task-list-header {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+#tasks .task {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  margin: 0 50px;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+#tasks .task .content {
+  flex: 1 1 0%;
+}
+#tasks .task .content .text {
+  font-weight: 500;
+  font-size: 18px;
+  width: 100%;
+}
+#tasks .task .content .text:not(:read-only) {
+  color: var(--primary-color);
+}
+
+#tasks .task .actions {
+  display: flex;
+  gap: 14px;
+}
+#tasks .task button {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.task .actions .edit {
+  color: #0A2558;
+}
+.task .actions .delete {
+  color: #d93434;
+}
+
+/* BASE */
+
+body {
+  background-color: 	#ADB9D3;
+}
+
+#login-options {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+#login-options button {
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+#login-options button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#base-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  border: 2px solid #0A2558;
+  margin: 60px 10%;
+  padding: 60px 0;
+  background-color: #e5e7eb;
+  color: #0A2558;
+  border-radius: 10px;
+};

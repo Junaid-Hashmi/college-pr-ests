@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Face Capture</title>
+    <link rel="stylesheet" href="/static/css/normalize.css" />
+    <link rel="stylesheet" href="/static/css/style_for_dashboard.css" />
+    <link rel="stylesheet" href="/static/css/style_for_admin.css" />
+    <link
+    href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <span class="logo_name">{{ session['user']['name'] }}</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="/dashboard/" class="active">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="/templates/capture/">
+            <i class='bx bxs-face' ></i>
+            <span class="links_name">Face Capture</span>
+          </a>
+        </li>
+        <li>
+          <a href="/templates/checkin/">
+            <i class='bx bx-check-square'></i>
+            <span class="links_name">Check-in</span>
+          </a>
+        </li>
+        <li>
+          <a href="/templates/checkout/">
+            <i class='bx bxs-check-square' ></i>
+            <span class="links_name">Check-Out</span>
+          </a>
+        </li>
+        <li>
+          <a href="/templates/to-do/">
+            <i class="bx bx-book-alt"></i>
+            <span class="links_name">To Do</span>
+          </a>
+        </li>
+        <li>
+          <a href="/templates/my-profile/">
+            <i class="bx bx-user"></i>
+            <span class="links_name">My Profile</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="/user/signout">
+            <i class="bx bx-log-out"></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <section class="main capture-face">
+        <h2 class="heading" id="capture-heading">Check-Out</h2>
+        <h3 class="note">Note: Once the face is detected, you can click on the DONE button</h3>
+        <div class="camera-wrapper">
+          <div id="camera-capture">
+            <img src="{{ url_for('video_feed_for_recognition_checkout') }}" />
+          </div>
+
+          <form>
+            <a class="button-capture-btn" type="submit" href="/attendance_done"
+              >Done</a
+            >
+          </form>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

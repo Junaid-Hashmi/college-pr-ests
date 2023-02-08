@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/style_for_admin.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <span class="logo_name">{{ session['user']['name'] }}</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="/admin/dashboard/employee/" class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Employee Details</span>
+          </a>
+        </li>
+        <li>
+          <a href="/admin/dashboard/status/">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Employee status</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="/admin/signout">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+    </nav>
+ 
+   </section>
+
+</body>
+</html>

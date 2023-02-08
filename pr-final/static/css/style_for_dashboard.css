@@ -1,0 +1,98 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* .dashboard {
+    
+    display: flex;
+    text-transform: uppercase;
+  }
+  
+  .sidebar {
+    color: #265df2;
+    background-color: #fff;
+    width: 25vw;
+    text-align: center;
+  }
+  
+
+  #photo {
+    width: 175px;
+    margin: 30px 30px 10px;
+    border-radius: 50%;
+    background-color: #cbd5e1;
+  }
+  .name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .nav-links {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+  .nav-links:hover {
+    background-color: #265df2;
+  }
+   */
+/* main */
+/* .main {
+    background-color: #265df2;
+    flex-grow: 1;
+    text-align: center;
+    color: #fff;
+    height: 120vh;
+  }
+  .main .heading {
+    margin: 50px 0 40px;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+  }
+  .date-display {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-left: 60px;
+  } */
+/* Timeclock box */
+/* .timeclock {
+    display: flex;
+    width: 60%;
+    margin: 20px auto;
+    gap: 20px;
+    background-color: #cbd5e1;
+    padding: 20px 30px;
+    border-radius: 6px;
+  }
+  .timing-box {
+    width: 50%;
+  }
+  .timing-box--heading {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .time {
+    color: var(--primary-color);
+    background-color: #fff;
+    padding: 60px 0;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 4rem;
+  }
+  .am-pm {
+    font-size: 1.6rem;
+    display: block;
+  }
+  
+  .hidden {
+    display: none;
+  } */

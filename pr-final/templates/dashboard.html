@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
+    <link rel="stylesheet" href="/static/css/style_for_dashboard.css" />
+    <link rel="stylesheet" href="/static/css/style_for_admin.css" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <span class="logo_name">{{ session['user']['name'] }}</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="/dashboard/" class="active">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="/templates/capture/">
+            <i class='bx bxs-face' ></i>
+            <span class="links_name">Face Capture</span>
+          </a>
+        </li>
+        <li>
+          <a href="/templates/checkin/">
+            <i class='bx bx-check-square'></i>
+            <span class="links_name">Check-in</span>
+          </a>
+        </li>
+        <li>
+          <a href="/templates/checkout/">
+            <i class='bx bxs-check-square' ></i>
+            <span class="links_name">Check-Out</span>
+          </a>
+        </li>
+        <li>
+          <a href="/templates/to-do/">
+            <i class="bx bx-book-alt"></i>
+            <span class="links_name">To Do</span>
+          </a>
+        </li>
+        <li>
+          <a href="/templates/my-profile/">
+            <i class="bx bx-user"></i>
+            <span class="links_name">My Profile</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="/user/signout">
+            <i class="bx bx-log-out"></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="main home-section">
+
+      <h2 class="heading">Dashboard</h2>
+      <div class="date-display">Date: <span id="date">{{ today_date }}</span></div>
+      <div class="timeclock">
+        <div class="timing-box">
+          <span class="timing-box--heading">Check-in Time</span>
+          <div class="time">{{ checkin_time }}<span class="am-pm">HH:MM:SS</span></div>
+        </div>
+        <div class="timing-box">
+          <span class="timing-box--heading">Check-out Time</span>
+          <div class="time">{{ checkout_time }} <span class="am-pm">HH:MM:SS</span></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/scripts.js"></script>
+  </body>
+</html>

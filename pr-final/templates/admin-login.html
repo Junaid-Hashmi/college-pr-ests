@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Login System</title>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <link rel="stylesheet" href="/static/css/styles1.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
+  </head>
+  <body>
+    <div class="card-wrapper">
+
+      <div class="card">
+        <h1 class="center form-title">Admin Log In</h1>
+
+        <div class="form login">
+          <form name="admin_login_form">
+            <div class="input-field">
+              <input
+                type="email"
+                name="email"
+                class="field"
+                placeholder="Enter your email"
+                required
+              />
+              <i class="uil uil-envelope icon"></i>
+            </div>
+
+            <div class="input-field">
+              <input
+                type="password"
+                name="password"
+                class="field password"
+                placeholder="Enter your password"
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+            </div>
+
+            <p class="error error--hidden"></p>
+
+            <div class="input-field button">
+              <input type="submit" value="Log In" class="btn" />
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/scripts.js"></script>
+  </body>
+</html>
